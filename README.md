@@ -30,8 +30,7 @@ A real-time chat application built with **React**, **Firebase** for authenticati
 
 ## Live Demo
 
-A live version of the app will be available [here https://chat-app-react-firebase-eight.vercel.app/]([https://your-app-on-render.com](https://chat-app-react-firebase-eight.vercel.app/)).
-
+A live version of the app will be available at  [https://chat-app-react-firebase-eight.vercel.app/](https://chat-app-react-firebase-eight.vercel.app/)
 ## Technologies Used
 
 - **React**: JavaScript library for building user interfaces.
