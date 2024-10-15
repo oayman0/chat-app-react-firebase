@@ -7,6 +7,10 @@ A real-time chat application built with **React**, **Firebase** for authenticati
 A live version of the app will be available at  [https://chat-app-react-firebase-eight.vercel.app/](https://chat-app-react-firebase-eight.vercel.app/)
 
 ## Screenshots
+![1](https://github.com/user-attachments/assets/d0decd0d-0f2e-4f55-b015-0ac7c15c0bdc)
+![2](https://github.com/user-attachments/assets/f2b48b20-2ed4-4859-b5fb-d6025396ffef)
+![3](https://github.com/user-attachments/assets/4a4479a4-0f26-46e3-9861-bfdd2f6f57d1)
+![4](https://github.com/user-attachments/assets/2dfe3e71-5d23-4493-a35f-9bfae0769b6d)
 
 
 
