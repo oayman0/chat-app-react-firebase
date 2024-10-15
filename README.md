@@ -1,7 +1,14 @@
 
 # Chat App
 
-A real-time chat application built with **React**, **Firebase** for authentication and database, and styled using **CSS**. The app allows users to sign up, log in, send messages, and reset passwords, with all messages stored in Firebase Firestore. The app will be deployed on **Render** for public use.
+A real-time chat application built with **React**, **Firebase** for authentication and database, and styled using **CSS**. The app allows users to sign up, log in, send messages, and reset passwords, with all messages stored in Firebase Firestore. The app will be deployed on **Vercel** for public use.
+## Live Demo
+
+A live version of the app will be available at  [https://chat-app-react-firebase-eight.vercel.app/](https://chat-app-react-firebase-eight.vercel.app/)
+
+## Screenshots
+
+
 
 ## Table of Contents
 
@@ -23,14 +30,12 @@ A real-time chat application built with **React**, **Firebase** for authenticati
 - **Last Seen Feature**: Users can see when others were last online.
 - **Responsive Design**: The app works across different screen sizes (mobile, tablet, desktop).
 
-## Screenshots
 
 
 
 
-## Live Demo
 
-A live version of the app will be available at  [https://chat-app-react-firebase-eight.vercel.app/](https://chat-app-react-firebase-eight.vercel.app/)
+
 ## Technologies Used
 
 - **React**: JavaScript library for building user interfaces.
