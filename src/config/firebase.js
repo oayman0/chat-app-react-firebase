@@ -1,25 +1,23 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
+import { getFirestore, setDoc, doc, collection, query, where, getDocs } from "firebase/firestore";
 import { toast } from "react-toastify";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { setDoc } from "firebase/firestore";
-import { doc } from "firebase/firestore";
-import { signOut } from "firebase/auth";
-import { sendPasswordResetEmail } from "firebase/auth/web-extension";
 
-// Firebase configuration using environment variables
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  apiKey: "AIzaSyCYtqaTE6p3d1efcEhCST30FIxiSko8hbk",
+  authDomain: "chat-app-rfa.firebaseapp.com",
+  projectId: "chat-app-rfa",
+  storageBucket: "chat-app-rfa.appspot.com",
+  messagingSenderId: "163019688264",
+  appId: "1:163019688264:web:47ec0700a8585d5ecb4b7d",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
@@ -34,21 +32,21 @@ const signup = async (username, email, password) => {
       email,
       name: "",
       avatar: "",
-      bio: "Hey There I am using chat app",
+      bio: "Hey There, I am using Chat App.",
       lastSeen: Date.now(),
     });
-    await setDoc(doc(db, "Chats", user.uid), {
-      chatsData: [],
+    await setDoc(doc(db, "chats", user.uid), {
+      chatData: [],
     });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     toast.error(error.code.split("/")[1].split("-").join(" "));
   }
 };
 
 const login = async (email, password) => {
   try {
-    await signInWithEmailAndPassword(auth, email, password);
+    const res = await signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.error(error);
     toast.error(error.code.split("/")[1].split("-").join(" "));
@@ -59,7 +57,7 @@ const logout = async () => {
   try {
     await signOut(auth);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     toast.error(error.code.split("/")[1].split("-").join(" "));
   }
 };
@@ -77,7 +75,7 @@ const resetPass = async (email) => {
       await sendPasswordResetEmail(auth, email);
       toast.success("Reset Email Sent");
     } else {
-      toast.error("Email doesn't exist");
+      toast.error("Email doesn't exists");
     }
   } catch (error) {
     console.error(error);
